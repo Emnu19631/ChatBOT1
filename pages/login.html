@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="avatar">
+        <img src="../assets/images/usuario.png" alt="User Icon" />
+      </div>
+      <h2>Iniciar sesión</h2>
+      <form id="loginForm" autocomplete="off">
+        <div class="input-group">
+          <img src="../assets/images/email.png" alt="Email Icon" class="icon" />
+          <input type="email" id="email" placeholder="Email ID" required autocomplete="off" />
+        </div>
+        <div class="input-group">
+          <img src="../assets/images/candado.png" alt="Password Icon" class="icon" />
+          <input type="password" id="password" placeholder="Password" required autocomplete="off" />
+        </div>
+        <div class="options">
+          <label><input type="checkbox" /> Remember me</label>
+        </div>
+        <button type="submit">LOGIN</button>
+      </form>
+    </div>
+  </div>
+  <script src="../js/login.js"></script>
+</body>
+</html>
