@@ -6,7 +6,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const remember = document.querySelector(".options input[type='checkbox']").checked;
 
  
-  if (email === 'yessly.poma@unmsm.edu.pe' && password === 'contraseña123') {
+  if (email === 'usuario@ejemplo.com' && password === 'contraseña123') {
     if (remember) {
       localStorage.setItem("rememberedEmail", email);
     } else {

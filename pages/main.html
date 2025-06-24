@@ -6,28 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/main.css" />
   <script src="../js/main.js"></script>
-
 </head>
 <body>
   <div class="container">
+    <!-- Sidebar -->
     <div class="sidebar">
-
       <div class="sidebar-logo">
         <img src="../assets/images/SUM.png" alt="SUM" />
       </div>
 
-      <button class="sidebar-btn">Inicio</button>
-      <button class="sidebar-btn">Mi Información</button>
-      <button class="sidebar-btn">Matrícula</button>
-      <button class="sidebar-btn">Reportes</button>
-      <button class="sidebar-btn">Mis Asistencias</button>
-      <button class="sidebar-btn">Mi Tutoría</button>
-      <button class="sidebar-btn">Plan de Estudios</button>
-      <button class="sidebar-btn">Manuales y Tutoriales</button>
+      <button class="sidebar-btn" onclick="restablecerPagina()">Inicio</button>
+
+      <button class="sidebar-btn" onclick="toggleSubmenu('informacion-submenu')">Mi Información</button>
+      <div id="informacion-submenu" style="display:none; padding-left: 20px;">
+        <ul>
+          <li><button class="sidebar-btn" onclick="mostrarPerfil()">Mi Perfil</button></li>
+          <li><button class="sidebar-btn" onclick="mostrarHistorial()">Historial Académico</button></li>
+        </ul>
+      </div>
+
+      <button class="sidebar-btn" onclick="toggleSubmenu('matricula-submenu')">Matrícula</button>
+      <div id="matricula-submenu" style="display:none; padding-left: 20px;">
+        <ul>
+          <li><button class="sidebar-btn" onclick="mostrarMatriculaInternet()">Matrícula Vía Internet</button></li>
+          <li><button class="sidebar-btn" onclick="mostrarProgramacion()">Programación de Asignaturas</button></li>
+        </ul>
+      </div>
+
+      <button class="sidebar-btn" onclick="toggleSubmenu('reportes-submenu')">Reportes</button>
+      <div id="reportes-submenu" style="display:none; padding-left: 20px;">
+        <ul>
+          <li><button class="sidebar-btn" onclick="mostrarPreMatricula()">Pre-Matrícula</button></li>
+          <li><button class="sidebar-btn" onclick="mostrarMatriculaReporte()">Matrícula</button></li>
+          <li><button class="sidebar-btn" onclick="mostrarEvaluaciones()">Evaluaciones</button></li>
+          <li><button class="sidebar-btn" onclick="mostrarDeudas()">Deudas</button></li>
+        </ul>
+      </div>
+
+      <button class="sidebar-btn" onclick="mostrarAsistencias()">Mis Asistencias</button>
+      <button class="sidebar-btn" onclick="mostrarTutoria()">Mi Tutoría</button>
+      <button class="sidebar-btn" onclick="mostrarPlan()">Plan de Estudios</button>
       <button class="sidebar-btn salir-btn" onclick="confirmarSalida(event)">Salir</button>
     </div>
 
-    <div class="main-content">
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
 
       <div class="card">
         <h2>Información Personal Académica</h2>
@@ -39,8 +62,9 @@
           <li>Situación Académica y Estado de Permanencia</li>
           <li>Promedio Ponderado, Número de Períodos Matriculados</li>
         </ul>
-        <button class="btn-vermas">Ver más... →</button>
+        <button class="btn-vermas" onclick="mostrarPerfil()">Ver más... →</button>
       </div>
+
       <div class="card">
         <h2>Matrícula Vía Internet</h2>
         <ul>
@@ -50,8 +74,9 @@
           <li>Sección Matriculada, Docente</li>
           <li>Total de Cursos y Créditos Matriculados</li>
         </ul>
-        <button class="btn-vermas">Ver más... →</button>
+        <button class="btn-vermas" onclick="mostrarMatriculaInternet()">Ver más... →</button>
       </div>
+
       <div class="card">
         <h2>Reporte Pre-Matrícula</h2>
         <ul>
@@ -59,8 +84,9 @@
           <li>Plan, Código y Nombre Descriptivo, Ciclo, Creditaje y Repitencias de la Asignatura</li>
           <li>Etapa del Proceso de Matrícula</li>
         </ul>
-        <button class="btn-vermas">Ver más... →</button>
+        <button class="btn-vermas" onclick="mostrarPreMatricula()">Ver más... →</button>
       </div>
+
       <div class="card">
         <h2>Reporte de Deudas</h2>
         <ul>
@@ -69,16 +95,18 @@
           <li>Ciclo/Año, Código, Nombre</li>
           <li>Monto de deuda</li>
         </ul>
-        <button class="btn-vermas">Ver más... →</button>
+        <button class="btn-vermas" onclick="mostrarDeudas()">Ver más... →</button>
       </div>
+
       <div class="card">
-        <h2>Programación de Cursos</h2>
+        <h2>Programación de Asignaturas</h2>
         <ul>
           <li>Asignatura, Creditaje, Horas Teoría, Práctica, Laboratorio</li>
           <li>Sección, Docente, Turno, Aula, Horario</li>
         </ul>
-        <button class="btn-vermas">Ver más... →</button>
+        <button class="btn-vermas" onclick="mostrarProgramacion()">Ver más... →</button>
       </div>
+
       <div class="card">
         <h2>Historial Académico y Calificaciones</h2>
         <ul>
@@ -86,10 +114,14 @@
           <li>Ciclo, Asignatura, Creditaje, Tipo Asignatura</li>
           <li>Calificación, Sección, tipo y Número de Acta</li>
         </ul>
-        <button class="btn-vermas">Ver más... →</button>
+        <button class="btn-vermas" onclick="mostrarHistorial()">Ver más... →</button>
       </div>
     </div>
 
+    <div id="informacion-cuadro" style="display:none;">
+        <h2>Mi Información</h2>
+        <p>Aquí puedes colocar más detalles o información relevante para el usuario.</p>
+    </div>
 
     <button class="robot-btn" title="Asistente 🤖">🤖</button>
   </div>
