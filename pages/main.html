@@ -1,17 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <title>Portal Académico</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Página Principal</title>
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <script src="../js/main.js"></script>
+
 </head>
 <body>
-  <div class="main-container">
-    <h1>Bienvenido a la página principal</h1>
-    <p>Has iniciado sesión correctamente.</p>
-    <button onclick="window.location.href='../pages/login.html'">Cerrar sesión</button>
+  <div class="container">
+    <div class="sidebar">
+
+      <div class="sidebar-logo">
+        <img src="../assets/images/SUM.png" alt="SUM" />
+      </div>
+
+      <button class="sidebar-btn">Inicio</button>
+      <button class="sidebar-btn">Mi Información</button>
+      <button class="sidebar-btn">Matrícula</button>
+      <button class="sidebar-btn">Reportes</button>
+      <button class="sidebar-btn">Mis Asistencias</button>
+      <button class="sidebar-btn">Mi Tutoría</button>
+      <button class="sidebar-btn">Plan de Estudios</button>
+      <button class="sidebar-btn">Manuales y Tutoriales</button>
+      <button class="sidebar-btn salir-btn" onclick="confirmarSalida(event)">Salir</button>
+    </div>
+
+    <div class="main-content">
+
+      <div class="card">
+        <h2>Información Personal Académica</h2>
+        <ul>
+          <li>Nombre, Fecha y Lugar de Nacimiento, Estado Civil,Sexo</li>
+          <li>Domicilio, Teléfono y Correo Electrónico</li>
+          <li>Facultad, Programa Académico, Especialidad</li>
+          <li>Plan de Estudios, Año y Modalidad de Ingreso</li>
+          <li>Situación Académica y Estado de Permanencia</li>
+          <li>Promedio Ponderado, Número de Períodos Matriculados</li>
+        </ul>
+        <button class="btn-vermas">Ver más... →</button>
+      </div>
+      <div class="card">
+        <h2>Matrícula Vía Internet</h2>
+        <ul>
+          <li>Período Académico Vigente</li>
+          <li>Fecha, Usuario, Tipo de Matrícula</li>
+          <li>Ciclo/Año, Código, Nombre, Tipo Asignatura</li>
+          <li>Sección Matriculada, Docente</li>
+          <li>Total de Cursos y Créditos Matriculados</li>
+        </ul>
+        <button class="btn-vermas">Ver más... →</button>
+      </div>
+      <div class="card">
+        <h2>Reporte Pre-Matrícula</h2>
+        <ul>
+          <li>Prioridad de Matrícula</li>
+          <li>Plan, Código y Nombre Descriptivo, Ciclo, Creditaje y Repitencias de la Asignatura</li>
+          <li>Etapa del Proceso de Matrícula</li>
+        </ul>
+        <button class="btn-vermas">Ver más... →</button>
+      </div>
+      <div class="card">
+        <h2>Reporte de Deudas</h2>
+        <ul>
+          <li>Relación de deudas</li>
+          <li>Fecha, Usuario, Tipo de Matrícula</li>
+          <li>Ciclo/Año, Código, Nombre</li>
+          <li>Monto de deuda</li>
+        </ul>
+        <button class="btn-vermas">Ver más... →</button>
+      </div>
+      <div class="card">
+        <h2>Programación de Cursos</h2>
+        <ul>
+          <li>Asignatura, Creditaje, Horas Teoría, Práctica, Laboratorio</li>
+          <li>Sección, Docente, Turno, Aula, Horario</li>
+        </ul>
+        <button class="btn-vermas">Ver más... →</button>
+      </div>
+      <div class="card">
+        <h2>Historial Académico y Calificaciones</h2>
+        <ul>
+          <li>Períodos Académicos Matriculados, Plan de Estudios</li>
+          <li>Ciclo, Asignatura, Creditaje, Tipo Asignatura</li>
+          <li>Calificación, Sección, tipo y Número de Acta</li>
+        </ul>
+        <button class="btn-vermas">Ver más... →</button>
+      </div>
+    </div>
+
+
+    <button class="robot-btn" title="Asistente 🤖">🤖</button>
   </div>
-  <script src="../js/main.js"></script>
 </body>
 </html>
