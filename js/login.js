@@ -12,8 +12,12 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     } else {
       localStorage.removeItem("rememberedEmail");
     }
+   // alert("Acceso permitido");
+   // window.location.href = "../pages/main.html";    modificacion para colocar el chatbot
     alert("Acceso permitido");
+    localStorage.setItem("isLoggedIn", "true"); //  Guardamos sesión
     window.location.href = "../pages/main.html";
+
   } else {
     alert("Correo o contraseña incorrectos");
   }
